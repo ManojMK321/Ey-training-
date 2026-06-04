@@ -1,0 +1,37 @@
+EY 			ApplicationModel 			TypePrimary 				MetricWhy This Metric?
+
+Anomaly detection in invoices
+Unsupervised learning (Anomaly Detection / Isolation Forest / Autoencoder)
+Precision / Recall (often Recall prioritized)
+Missing anomalies (fraud/errors) is costly, so high recall ensures most anomalies are caught, while precision prevents too many false alarms
+
+
+
+Spam classification in audit emails
+Supervised learning (Binary Classification – NLP model)
+F1-score
+Balances false positives (important emails marked spam) and false negatives (spam slipping through)
+
+
+Predicting deal close probability
+Supervised learning (Classification or Regression – e.g., Logistic Regression, XGBoost)
+AUC-ROC / Log Loss
+Measures how well probabilities are ranked and calibrated for decision-making
+
+
+Summarising 100-page contracts
+Generative AI (LLM – Text Summarization)
+BERTScore / Human evaluation
+BERTScore captures semantic similarity (meaning, not just word overlap), while human review ensures accuracy and completeness
+
+
+Translating audit reports
+Sequence-to-sequence model (NLP – Machine Translation)
+BLEU score
+Measures similarity between translated text and reference translations
+
+
+Flagging revenue forecasting errors
+Supervised learning (Regression / Time-series forecasting)
+RMSE / MAE
+Captures magnitude of prediction error; essential for financial accuracy
