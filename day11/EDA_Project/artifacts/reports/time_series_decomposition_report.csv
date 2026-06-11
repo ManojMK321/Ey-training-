@@ -1,0 +1,5 @@
+column,period,model
+red,50,additive
+ir,50,additive
+red_corrected,50,additive
+ir_corrected,50,additive

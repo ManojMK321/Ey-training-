@@ -1,0 +1,8 @@
+column,missing_count,missing_percent,fill_strategy
+seq,0,0.0,Linear Interpolation + Median
+timestamp_ms,0,0.0,Linear Interpolation + Median
+red,0,0.0,Linear Interpolation + Median
+ir,0,0.0,Linear Interpolation + Median
+red_corrected,0,0.0,Linear Interpolation + Median
+ir_corrected,0,0.0,Linear Interpolation + Median
+time_diff_ms,1,0.01347164219318335,Linear Interpolation + Median

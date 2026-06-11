@@ -1,0 +1,7 @@
+metric,value
+expected_interval_ms,20.0
+approx_sampling_rate_hz,50.0
+duplicate_timestamps,54.0
+missing_gap_count,543.0
+minimum_interval_ms,0.0
+maximum_interval_ms,43.0

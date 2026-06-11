@@ -1,0 +1,132 @@
+
+LinkedIn Website – Object Storage Analysis & Decision
+
+        1. Features Implemented Using Object Storage
+        Object storage (Amazon S3 / Azure Blob) is ideal for storing unstructured, large-scale, and media-heavy data. In a LinkedIn-like application, the following features can be implemented using object storage:
+        🔹 A. Profile Features
+
+            1. Profile Photos & Cover Images
+            Store user profile pictures and background banners
+            Multiple resolutions (thumbnail, HD)
+            Delivered via CDN for fast access
+
+            2. Resume / CV Uploads
+            Users upload resumes in PDF/DOC formats
+            Version control (resume_v1, resume_v2)
+            Recruiters can download or preview
+
+            3. Certifications & Documents
+            Upload certificates, licenses, and other documents
+            Stored securely with access permissions
+
+        🔹 B. Feed & Content Features
+
+            4. Post Media (Images & Videos)
+            Images and videos in user posts
+            Heavy read traffic → ideal for object storage + CDN
+
+            5. Document Posts
+            Users share PDFs, slide decks, reports
+            Preview + download functionality
+
+            6. Video Content
+            Native video uploads
+            Stored in object storage and delivered via CDN
+            Integrated with video processing pipelines
+
+        🔹 C. Messaging Features
+
+            7. Chat Attachments
+            Images, files, voice notes shared in messages
+            Stored separately from message metadata (DB)
+
+        🔹 D. Logs & Analytics
+            8. Activity Logs
+            User activity tracking
+            Feed impressions, clicks
+            Stored in JSON/CSV formats
+
+            9. Machine Learning Data
+            Feed ranking datasets
+            Resume parsing models
+            Content moderation training data
+
+        🔹 E. Archival & Backup
+            10. Old Content Storage
+            Inactive accounts
+            Old posts
+            Archived resumes
+            → Moved to cold/archive storage tiers
+            ❌ Features NOT Suitable for Object Storage
+            User profile structured data (use SQL/NoSQL DB)
+            Feed ranking system (use caching + distributed DB)
+            Messaging metadata (use DB)
+            Search index (use Elasticsearch)
+
+2. S3 vs Azure Blob Storage – Comparison
+    
+    🔷 Amazon S3
+        ✅ Strengths
+        Largest global CDN footprint → faster media delivery
+        Intelligent tiering for cost optimization
+        Strong event-driven architecture (Lambda)
+        High availability across many regions
+        Object Lock for compliance
+
+        ❌ Weaknesses
+        High data egress costs (expensive downloads)
+        Limited native integration with Microsoft ecosystem
+        Requires extra configuration for GDPR compliance
+
+    🔷 Azure Blob Storage
+        ✅ Strengths
+            Native integration with Microsoft ecosystem (Entra ID, Microsoft 365)
+            Strong GDPR & compliance support
+            Lifecycle management (Hot → Cool → Archive)
+            Immutable storage for compliance
+            Seamless integration with Azure Functions & Event Grid
+
+            ❌ Weaknesses
+            Smaller CDN footprint compared to AWS
+            Archive retrieval latency can be high
+            Slightly higher cold-start latency in some cases
+
+    3. Final Decision
+         Chosen Storage: Azure Blob Storage
+
+        ✅ Justification
+
+        LinkedIn is owned by Microsoft
+        Azure integrates directly with Microsoft services
+        Seamless Identity Integration
+        Entra ID simplifies authentication and authorization
+        Better Compliance & Data Governance
+        Strong GDPR and enterprise compliance features
+        Integration with AI & Analytics
+        Azure ecosystem supports AI-based features like:
+        1)Feed ranking
+        2)Resume parsing
+        3)Content moderation
+        4)Lifecycle Management
+        5)Efficient handling of active vs archived data
+
+        When S3 Might Be Better
+        1)If the system is AWS-native
+        2)If global media delivery performance is the top priority
+        3)If application is heavily media-centric (>90%)
+
+✅ Conclusion
+    Object storage plays a critical role in LinkedIn for handling:
+    Profile images
+    Resumes and documents
+    Feed media (images/videos)
+    Chat attachments
+    Logs and analytics data
+    After comparing both options, Azure Blob Storage is the better choice because it provides:
+    Strong integration with Microsoft ecosystem
+    Better compliance support
+    Efficient lifecycle management
+    Seamless enterprise identity handling
+
+✅ Final Answer:
+        Use Azure Blob Storage for implementing LinkedIn’s object storage layer.

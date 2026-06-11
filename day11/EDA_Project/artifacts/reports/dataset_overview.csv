@@ -1,0 +1,7 @@
+column_name,data_type,missing_count
+seq,int64,0
+timestamp_ms,int64,0
+red,int64,0
+ir,int64,0
+red_corrected,float64,0
+ir_corrected,float64,0
