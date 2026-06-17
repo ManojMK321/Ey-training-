@@ -1,0 +1,12 @@
+ Mini Case Study Answer
+
+Framework Chosen: LangChain + RAG (Retrieval-Augmented Generation) with a LangGraph orchestration layer
+
+Step 1: Inbound emails are ingested via a queue (e.g., Kafka/SQS) and passed to an LLM-based classifier that assigns each email to a predefined category (refund, delay, damage, tracking, etc.) using few-shot prompting or a fine-tuned classifier.
+
+Step 2: The classified email triggers a RAG pipeline — the query is embedded and used to retrieve the top-k relevant policy documents from a vector store (e.g., Pinecone/FAISS), providing grounded context for reply generation.
+
+Step 3: A LangChain LLM chain receives the email + retrieved documents and generates a structured draft reply, with the category and retrieved context injected into a prompt template.
+
+Step 4: A LangGraph conditional node evaluates confidence score and complexity flags — if confidence is low or the case is flagged complex, it calls the ticketing API (e.g., Zendesk/Jira) to escalate to a human agent with full context attached.
+Justification: LangChain handles the modular chaining of classify → retrieve → generate cleanly; LangGraph adds stateful, conditional orchestration needed for the escalation logic. RAG ensures replies are grounded in actual company policy, reducing hallucination. The pipeline is scalable to 10,000 emails/day via async processing and can be monitored with LangSmith for quality control
