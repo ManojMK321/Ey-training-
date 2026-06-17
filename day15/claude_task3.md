@@ -32,6 +32,8 @@ The attending essentially documented the *reason the workup was inadequate*, whi
 
 **Bottom line:** This is a high-risk discharge that needs either re-evaluation or careful documentation cleanup. The workup itself is borderline defensible depending on the full clinical picture (age, risk profile, pain character), but attributing it to ED volume is indefensible.
 
+====================================================================================================
+
 ### sonnet
 
 **Summary:** A patient presenting with two days of chest pain was discharged home after stable vitals and a normal EKG, without troponin testing. Ibuprofen was prescribed. The attending documented time pressure from ED volume as context for the visit.
@@ -61,6 +63,8 @@ What's also missing from the note: vital sign values rather than just "stable," 
 The clinical picture may or may not have justified a streamlined workup depending on the patient's age, risk profile, and full presentation — none of which are documented. That missing context is itself the problem. A defensible note for this discharge would need explicit risk stratification or a documented clinical rationale for the approach taken. As written, this note has both a workup gap and a self-incriminating explanation for it.
 
 *Note: this is a documentation and risk analysis, not a clinical directive. Any decisions about patient care or record amendment should involve the treating clinician and relevant institutional or legal counsel.*
+
+==================================================================================================================================
 
 ### opus
 
