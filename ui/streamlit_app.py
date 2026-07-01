@@ -141,7 +141,7 @@ html, body { background:#111111 !important; color:#f0f0f0 !important; }
 /* ── chat list item — default ── */
 [data-testid="stSidebar"] .chat-item-btn .stButton > button {
   padding:7px 12px !important;
-  font-size:13px !important;
+  font-size:15px !important;
   color:#c8c8c8 !important;
   border-left:2px solid transparent !important;
   border-radius:0 !important;
@@ -161,7 +161,7 @@ html, body { background:#111111 !important; color:#f0f0f0 !important; }
   border-left:2px solid #F5C518 !important;
   border-radius:0 !important;
   padding:7px 12px !important;
-  font-size:13px !important;
+  font-size:15px !important;
   font-weight:500 !important;
 }
 
@@ -566,8 +566,8 @@ with st.sidebar:
               border-radius:8px;display:flex;align-items:center;justify-content:center;
               font-size:16px;flex-shrink:0;">💬</div>
   <div>
-    <div style="font-size:13px;font-weight:600;color:#f0f0f0;letter-spacing:0.2px;">DocIQ</div>
-    <div style="font-size:11px;color:#aaa;">Document intelligence</div>
+    <div style="font-size:15px;font-weight:600;color:#f0f0f0;letter-spacing:0.2px;">DocIQ</div>
+    <div style="font-size:13px;color:#aaa;">Document intelligence</div>
   </div>
 </div>
 """, unsafe_allow_html=True)
@@ -581,7 +581,7 @@ with st.sidebar:
 
     # ── Workspace section ─────────────────────────────────────────────────
     st.markdown(
-        '<div style="font-size:11px;color:#bbb;font-weight:600;letter-spacing:0.9px;'
+        '<div style="font-size:12px;color:#bbb;font-weight:600;letter-spacing:0.9px;'
         'text-transform:uppercase;padding:10px 14px 2px;">Workspace</div>',
         unsafe_allow_html=True,
     )
@@ -594,7 +594,7 @@ with st.sidebar:
     # ── Chat sessions list ────────────────────────────────────────────────
     if st.session_state.chat_sessions:
         st.markdown(
-            '<div style="font-size:11px;color:#bbb;font-weight:600;letter-spacing:0.9px;'
+            '<div style="font-size:12px;color:#bbb;font-weight:600;letter-spacing:0.9px;'
             'text-transform:uppercase;padding:10px 14px 2px;">Chats</div>',
             unsafe_allow_html=True,
         )
@@ -643,8 +643,8 @@ with st.sidebar:
               display:flex;align-items:center;justify-content:center;
               font-size:10px;font-weight:600;color:#1a1500;flex-shrink:0;">CI</div>
   <div>
-    <div style="font-size:14px;color:#ffffff;font-weight:500;">Contract IQ</div>
-    <div style="font-size:11px;color:#aaa;">Pro plan</div>
+    <div style="font-size:15px;color:#ffffff;font-weight:500;">Contract IQ</div>
+    <div style="font-size:13px;color:#aaa;">Pro plan</div>
   </div>
 </div>
 """, unsafe_allow_html=True)
